@@ -1,0 +1,83 @@
+apply plugin: 'com.android.library'
+
+def applicationName = "asr_library"
+def versionMajor = 1
+def versionMinor = 1
+def versionPatch = 37
+def versionId = "bc1"
+
+android {
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    compileSdkVersion 29
+    buildToolsVersion '28.0.3'
+    flavorDimensions "default"
+
+    defaultConfig {
+        minSdkVersion 20
+        targetSdkVersion 29
+        versionCode versionMajor * 10000 + versionMinor * 100 + versionPatch
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+        multiDexEnabled true
+
+        libraryVariants.all { variant ->
+            variant.outputs.all { output ->
+                outputFileName = new File(
+                        "${applicationName}_v${versionMajor}.${versionMinor}.${versionPatch}-${versionId}_[${variant.productFlavors[0].name}].aar")
+            }
+        }
+    }
+
+    productFlavors {
+        library {
+
+        }
+        unity {
+
+        }
+    }
+
+    buildTypes {
+        release {
+            // Enables code shrinking, obfuscation, and optimization.
+            minifyEnabled false
+            // Whether this flavour type should generate a debuggable apk.
+            debuggable false
+            // Proguard rules to minify library.
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            // Enables code shrinking, obfuscation, and optimization.
+            minifyEnabled false
+            // Whether this flavour type should generate a debuggable apk.
+            debuggable true
+            // Proguard rules to minify library.
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dexOptions {
+        javaMaxHeapSize "8g"
+        preDexLibraries false
+    }
+
+    if (project.hasProperty('devBuild')) {
+        splits.abi.enable = false
+        splits.density.enable = false
+    }
+}
+
+dependencies {
+    // *********************************************************************************************
+    // * ANDROID-X LIBRARIES
+    // *********************************************************************************************
+    compileOnly 'androidx.annotation:annotation:1.1.0'
+
+    // *********************************************************************************************
+    // * INTERNAL LIBRARIES
+    // *********************************************************************************************
+    compileOnly files('src/main/libs/unity_classes.jar')
+}
