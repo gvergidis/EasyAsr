@@ -1,4 +1,4 @@
-package com.mls.engineAsr.asr;
+package com.vgraphics.engineAsr.asr;
 
 import android.content.Context;
 import android.util.Log;
@@ -7,7 +7,7 @@ import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.mls.engineAsr.Interfaces.AsrCallbacksListener;
+import com.vgraphics.engineAsr.Interfaces.AsrCallbacksListener;
 import com.unity3d.player.UnityPlayer;
 
 import java.util.List;

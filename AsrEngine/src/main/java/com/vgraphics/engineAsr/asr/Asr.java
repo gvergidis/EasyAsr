@@ -1,4 +1,4 @@
-package com.mls.engineAsr.asr;
+package com.vgraphics.engineAsr.asr;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -11,10 +11,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresPermission;
 
-import com.mls.engineAsr.Enums.AsrEngines;
-import com.mls.engineAsr.Interfaces.AsrCallbacksListener;
-import com.mls.engineAsr.Interfaces.AsrEngineInterface;
-import com.mls.engineAsr.asr.GoogleFree.GoogleFreeAsr;
+import com.vgraphics.engineAsr.Enums.AsrEngines;
+import com.vgraphics.engineAsr.Interfaces.AsrCallbacksListener;
+import com.vgraphics.engineAsr.Interfaces.AsrEngineInterface;
+import com.vgraphics.engineAsr.asr.GoogleFree.GoogleFreeAsr;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,8 +1,8 @@
-package com.mls.engineAsr.Interfaces;
+package com.vgraphics.engineAsr.Interfaces;
 
 import androidx.annotation.Nullable;
 
-import com.mls.engineAsr.asr.Asr;
+import com.vgraphics.engineAsr.asr.Asr;
 
 import java.util.List;
 

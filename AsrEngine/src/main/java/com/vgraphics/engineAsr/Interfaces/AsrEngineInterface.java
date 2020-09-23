@@ -1,8 +1,8 @@
-package com.mls.engineAsr.Interfaces;
+package com.vgraphics.engineAsr.Interfaces;
 
 import androidx.annotation.NonNull;
 
-import com.mls.engineAsr.Enums.AsrEngines;
+import com.vgraphics.engineAsr.Enums.AsrEngines;
 
 import java.util.List;
 

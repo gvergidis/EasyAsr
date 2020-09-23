@@ -1,4 +1,4 @@
-package com.mls.engineAsr.asr.GoogleFree;
+package com.vgraphics.engineAsr.asr.GoogleFree;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;
@@ -16,16 +16,16 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 
-import com.mls.engineAsr.Enums.AsrEngines;
-import com.mls.engineAsr.Enums.EngineState;
-import com.mls.engineAsr.Interfaces.AsrCallbacksListener;
-import com.mls.engineAsr.Interfaces.AsrEngineInterface;
-import com.mls.engineAsr.asr.Asr;
+import com.vgraphics.engineAsr.Enums.AsrEngines;
+import com.vgraphics.engineAsr.Enums.EngineState;
+import com.vgraphics.engineAsr.Interfaces.AsrCallbacksListener;
+import com.vgraphics.engineAsr.Interfaces.AsrEngineInterface;
+import com.vgraphics.engineAsr.asr.Asr;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.mls.engineAsr.asr.Asr.TAG;
+import static com.vgraphics.engineAsr.asr.Asr.TAG;
 
 public class GoogleFreeAsr implements AsrEngineInterface, RecognitionListener {
     // ╔═══════════════════════════════════════════════════════════════════════════════════════════╗
